@@ -1,0 +1,2 @@
+1. We cannot use '' single quotes in Go just like we use in Python
+2.
