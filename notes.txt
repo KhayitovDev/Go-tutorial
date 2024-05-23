@@ -1,0 +1,19 @@
+1.We cannot use single '' quotes in Go, instead we need to use "" double quotes
+2.There are three print function in Go:
+    fmt.Print() - regular print
+    fmt.Println()- prints in a new line
+    fmt.Printf()- formatted print 
+
+3. There are different types of variable assignments in Go:
+    var name = "Golang" - var keyword is used to store variable values that we can change later
+    const passportId=4334 const keyword is used to store variable that we don't change
+
+4. in order to get user input we use fmt.Scan() function from fmt package
+    var username string
+    fmt.Scan(&username)
+    // this will expect user to enter string value as a username 
+
+5. To check the type of our value we use  %T with fmt.Printf()
+    var conferenceNmae="GO Conference"
+	const conferenceTickets=50
+    fmt.Printf("Conference Name type is '%T' conference ticket type is '%T' \n", conferenceNmae, conferenceTickets)
