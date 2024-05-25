@@ -4,8 +4,10 @@ import "fmt"
 
 func main() {
 	var conferenceNmae="GO Conference"
-	const conferenceTickets=50
-	var remainingTickets=50
+	const conferenceTickets =50
+	var remainingTickets =50
+	var bookings [] string
+
 
 	fmt.Printf("Conference Name type is '%T' conference ticket type is '%T' \n", conferenceNmae, conferenceTickets)
 
@@ -36,6 +38,15 @@ func main() {
 	if isTrue {
 		fmt.Printf("Confirmation:\n First Name: %v \n Last Name: %v \n Age: %v \n Email: %v \n Number of Tickets: %v \n", firstName, LastName, age, email, userTickets)
 		remainingTickets=remainingTickets-userTickets
+		bookings=append(bookings, firstName + "," + LastName)
+		fmt.Printf("The whole array: %v\n", bookings)
+		fmt.Printf("The first value in array: %v \n", bookings[0])
+		fmt.Printf("The array type: %T \n", bookings)
+		fmt.Printf("The length of array: %v \n", len(bookings))
+		
+		
+
+
 		fmt.Printf("Remaining ticktes after booking: %v", remainingTickets)
 	} else {
 		fmt.Print("You didn't confirm! Please fill out again")

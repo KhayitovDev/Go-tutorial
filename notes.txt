@@ -5,8 +5,47 @@
     fmt.Printf()- formatted print 
 
 3. There are different types of variable assignments in Go:
-    var name = "Golang" - var keyword is used to store variable values that we can change later
-    const passportId=4334 const keyword is used to store variable that we don't change
+   var:
+        var is used to declare variables.
+        It allows you to explicitly specify the type of the variable.
+        Variables declared using var can be reassigned.
+
+        package main
+
+        import "fmt"
+
+        func main() {
+            var age int  // Declares a variable named age of type int
+            age = 30     // Assigns the value 30 to age
+            fmt.Println("Age:", age)
+        }
+    const:
+        const is used to declare constants.
+        Constants must have a value at compile-time, and their value cannot be changed later.
+        You must explicitly assign a value to a constant when declaring it.
+
+        package main
+
+        import "fmt"
+
+        func main() {
+            const pi = 3.14  // Declares a constant named pi with a value of 3.14
+            fmt.Println("Pi:", pi)
+        }
+    := (Shorthand Declaration):
+        := is a shorthand notation used for variable declaration and initialization.
+        It automatically infers the type of the variable from the value on the right-hand side.
+        It can only be used within functions or local scopes.
+
+        package main
+
+        import "fmt"
+
+        func main() {
+            name := "Alice"  // Declares a variable named name of type string and initializes it with "Alice"
+            fmt.Println("Name:", name)
+        }
+
 
 4. in order to get user input we use fmt.Scan() function from fmt package
     var username string
@@ -17,3 +56,16 @@
     var conferenceNmae="GO Conference"
 	const conferenceTickets=50
     fmt.Printf("Conference Name type is '%T' conference ticket type is '%T' \n", conferenceNmae, conferenceTickets)
+
+6. Arrays have fixed size in Go, when we create an array, we need to define the size of array also
+    var bookings=[50]
+    we also need to define data type of values that we want to store in array
+
+    var bookings=[50] string {}
+
+7. In Go, there is a slice, which is an abstraction of Array, but more dynamic version,
+    in a slice we define the array without size
+    var bookings [] string
+    in this case, it is more dynamic since we may not know the size of array every time
+    and we can also use the same append() function as in python to append the value to slice
+
